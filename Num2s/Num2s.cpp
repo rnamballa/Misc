@@ -6,6 +6,9 @@
 #include <math.h>
 #include <string>
 
+// Program to calculate number of 2's (digits) in numbers from 0 to n. 
+// For example, number of 2's in 0 to 3 is 1.
+// Number of 2's in 0 to 23 is 7 - 2, 12, 20, 21, 22, 23.
 int main(int argc, char* argv[])
 {
     if (argc < 2)
@@ -14,6 +17,7 @@ int main(int argc, char* argv[])
     int n = atoi(argv[1]);
     int count = 0;
 
+    // Iterate through each digit of the number and aggregate the number of 2's.
     for (int i = 0; i <= log10(n); i++)
     {
         int pos = pow(10, i);
